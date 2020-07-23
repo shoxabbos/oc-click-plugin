@@ -1,4 +1,4 @@
-You can find documentation in here https://help.paycom.uz/ru
+You can find documentation in here http://docs.click.uz/
 
 ### You can like this listen Plugin events and expand functionality 
 ```
