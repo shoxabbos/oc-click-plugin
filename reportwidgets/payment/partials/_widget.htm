@@ -1,0 +1,16 @@
+<div class="report-widget">
+    <h3>Payme tranzaksiyalari</h3>
+    <hr>
+    <div
+        class="control-chart"
+        data-control="chart-pie"
+        data-size="250"
+        data-center-text="<?= number_format( ($success->sum('amount') + $fail->sum('amount')) / 100 ) ?> <br> so'm">
+        <hr>
+        <ul>
+            <li>Tolov otgan <span> <?=($success->sum('amount') / 100)?> so'm </span></li>
+            <li>Xatolik bor <span> <?=($fail->sum('amount') / 100)?> so'm </span></li>
+        </ul>
+    </div>
+
+</div>

@@ -1,0 +1,10 @@
+plugin:
+    name: 'shohabbos.click::lang.plugin.name'
+    description: 'shohabbos.click::lang.plugin.description'
+    author: Shohabbos
+    icon: oc-icon-paypal
+    homepage: 'https://click.uz'
+permissions:
+    manage_transactions:
+        tab: 'shohabbos.click::lang.plugin.name'
+        label: 'Manage transactions'

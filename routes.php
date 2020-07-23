@@ -1,0 +1,1 @@
+<?php Route::any('/click-webhook', 'Shohabbos\Click\Controllers\Click@index');

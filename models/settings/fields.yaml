@@ -1,0 +1,70 @@
+tabs:
+    fields:
+        min_amount:
+            default: 1000
+            required: 1
+            label: 'shohabbos.payme::lang.settings.min_amount'
+            comment: 'shohabbos.payme::lang.settings.min_amount_desc'
+            span: auto
+            tab: 'shohabbos.payme::lang.settings.tab_main'
+            type: text
+        max_amount:
+            default: 100000
+            required: 1
+            label: 'shohabbos.payme::lang.settings.max_amount'
+            comment: 'shohabbos.payme::lang.settings.max_amount_desc'
+            span: auto
+            tab: 'shohabbos.payme::lang.settings.tab_main'
+            type: text
+        handler:
+            label: 'Обработчик запросов CLICK'
+            span: auto
+            default: /payme-webhook
+            required: 1
+            type: text
+            tab: 'shohabbos.payme::lang.settings.tab_main'
+        timeout:
+            label: 'shohabbos.payme::lang.settings.timeout'
+            span: auto
+            default: 3600
+            required: 1
+            type: text
+            comment: 'shohabbos.payme::lang.settings.timeout_desc'
+            tab: 'shohabbos.payme::lang.settings.tab_main'
+        can_cancel:
+            tab: 'shohabbos.payme::lang.settings.tab_main'
+            label: 'shohabbos.payme::lang.settings.can_cancel'
+            type: switch
+            span: auto
+            comment: 'shohabbos.payme::lang.settings.can_cancel_desc'
+        service_id:
+            label: 'SERVICE ID'
+            span: auto
+            required: 1
+            type: text
+            tab: 'shohabbos.payme::lang.settings.tab_keys'
+        merchant_id:
+            label: 'MERCHANT ID'
+            span: auto
+            required: 1
+            type: text
+            tab: 'shohabbos.payme::lang.settings.tab_keys'
+        secret_key:
+            label: 'SECRET KEY'
+            span: auto
+            required: 1
+            type: text
+            tab: 'shohabbos.payme::lang.settings.tab_keys'
+        merchant_user_id:
+            label: 'MERCHANT USER ID'
+            span: auto
+            required: 1
+            type: text
+            tab: 'shohabbos.payme::lang.settings.tab_keys'
+        code:
+            label: 'shohabbos.payme::lang.settings.code'
+            type: codeeditor
+            size: giant
+            tab: 'shohabbos.payme::lang.settings.tab_code'
+            language: php
+            comment: 'shohabbos.payme::lang.settings.code_desc'

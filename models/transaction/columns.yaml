@@ -1,0 +1,38 @@
+columns:
+    id:
+        label: id
+        type: number
+        searchable: true
+        sortable: true
+    amount:
+        label: amount
+        type: number
+        searchable: true
+        sortable: true
+    account:
+        label: account
+        type: text
+        searchable: true
+        sortable: true
+    click_trans_id:
+        label: click_trans_id
+        type: number
+        searchable: true
+    status:
+        label: status
+        type: text
+        searchable: true
+    error:
+        label: error
+        type: text
+        searchable: true
+    date:
+        label: date
+        type: number
+        searchable: true
+    created_at:
+        label: created_at
+        type: datetime
+    updated_at:
+        label: updated_at
+        type: datetime
