@@ -13,6 +13,16 @@ class Plugin extends PluginBase
         ];
     }
 
+    public function registerReportWidgets()
+    {
+        return [
+            'Shohabbos\Click\ReportWidgets\Payment' => [
+                'label' => 'Transactions of click',
+                'context' => 'dashboard'
+            ],
+        ];
+    }
+
     public function registerSettings()
     {
     	return [

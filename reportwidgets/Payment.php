@@ -12,9 +12,8 @@ class Payment extends ReportWidgetBase
     public function render()
     {
         try {
-            $this->loadData();
-        }
-        catch (Exception $ex) {
+            $this->loadData();    
+        } catch (\Exception $ex) {
             $this->vars['error'] = $ex->getMessage();
         }
 
@@ -36,13 +35,13 @@ class Payment extends ReportWidgetBase
 
 	protected function loadData()
     {
-		$successQuery = Transaction::where('state', 2);
-		$failQuery = Transaction::where('state', '!=', 2);
+		$successQuery = Transaction::where('error', 0);
+		$failQuery = Transaction::where('error', '!=', 0);
 
 		if ($this->property('days')) {
-			$day = (time() - ($this->property('days') * 86400)) * 1000;
-			$this->vars['success'] = $successQuery->where('create_time', '>', $day)->get();
-			$this->vars['fail'] = $failQuery->where('create_time', '>', $day)->get();
+			$day = (time() - ($this->property('days') * 86400));
+			$this->vars['success'] = $successQuery->where('date', '>', $day)->get();
+			$this->vars['fail'] = $failQuery->where('date', '>', $day)->get();
 		} else {
 			$this->vars['success'] = $successQuery->get();
 			$this->vars['fail'] = $failQuery->get();
