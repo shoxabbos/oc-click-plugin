@@ -22,11 +22,18 @@ class ClickPayForm extends ComponentBase
 
 
     public function onRun() {
-    	$this->page['service_id']       = Settings::get('service_id');
+        $this->page['service_id']       = Settings::get('service_id');
         $this->page['merchant_id']      = Settings::get('merchant_id');
         $this->page['secret_key']       = Settings::get('secret_key');        
-        $this->page['merchant_user_id'] = Settings::get('merchant_user_id');
+        $this->page['merchant_user_id'] = Settings::get('merchant_user_id');	
     }
 
+    public static function generateUrl($transaction_param, $amount, $return_url) {
+        $service_id = Settings::get('service_id');
+        $merchant_id = Settings::get('merchant_id');
+
+        return "https://my.click.uz/services/pay?service_id={$service_id}&merchant_id={$merchant_id}&amount={$amount}&transaction_param={$transaction_param}&return_url={$return_url}";
+    } 
     
+
 }

@@ -158,16 +158,18 @@ class Click extends Controller
 
 
     private function getSing() {
-        return md5(
-            $this->params['click_trans_id'] .
+        $signString = ($this->params['click_trans_id'] .
             $this->params["service_id"] .
             $this->secret_key .
             $this->params['merchant_trans_id'] .
             ($this->params['action'] == 1 ? $this->params['merchant_prepare_id'] : '').
             $this->params['amount'] .
             $this->params['action'] .
-            $this->params['sign_time']
-        );
+            $this->params['sign_time']);
+
+        //dump($signString);
+
+        return md5($signString);
     }
 
     public static function clickMessages() {
